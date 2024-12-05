@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 
 
@@ -29,12 +30,15 @@ def check_sections_overlap(sections):
 
 def main():
     """Sorts sections of a file marked by special markers passed as arguments"""
-
+    file_path="mkdocs.yml"
+    start_marker="#pre-commit-sort-start"
+    end_marker="#pre-commit-sort-end"
     # Read args
-    file_path = sys.argv[1]
-    if sys.argv >= 2:
+    if len(sys.argv) >= 2:
+        file_path = sys.argv[1]
+    if len(sys.argv) >= 3:
         start_marker = sys.argv[2]
-    if sys.argv >= 3:
+    if len(sys.argv) >= 4:
         end_marker = sys.argv[3]
     
     # Find sections in file
