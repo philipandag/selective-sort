@@ -1,0 +1,5 @@
+- id: selective-sort
+  name: Selective Sort
+  description: Selectively sorts given file in marked sections only
+  entry: selective-sort
+  language: python
